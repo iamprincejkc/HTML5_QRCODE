@@ -59,18 +59,18 @@ function onScanSuccess(qrCodeMessage) {
       console.log(test.subject.sex);
 
       $("#qr-result").append();
-        $('#myTable tr:last').after(`<td>DateIssued<td></td><td>:</td><td>${test.DateIssued}</td></tr>`);   
-        $('#myTable tr:last').after(`<td>Issuer<td></td><td>:</td><td>${test.Issuer}</td></tr>`);   
-        $('#myTable tr:last').after(`<td>DateIssued<td></td><td>:</td><td>${test.alg}</td></tr>`);   
-        $('#myTable tr:last').after(`<td>DateIssued<td></td><td>:</td><td>${test.signature}</td></tr>`);   
-        $('#myTable tr:last').after(`<td>DateIssued<td></td><td>:</td><td>${test.subject.BF}</td></tr>`);    
-        $('#myTable tr:last').after(`<td>DateIssued<td></td><td>:</td><td>${test.subject.DOB}</td></tr>`) 
-        $('#myTable tr:last').after(`<td>DateIssued<td></td><td>:</td><td>${test.subject.PCN}</td></tr>`) 
-        $('#myTable tr:last').after(`<td>DateIssued<td></td><td>:</td><td>${test.subject.POB}</td></tr>`) 
-        $('#myTable tr:last').after(`<td>DateIssued<td></td><td>:</td><td>${test.subject.fName}</td></tr>`) 
-        $('#myTable tr:last').after(`<td>DateIssued<td></td><td>:</td><td>${test.subject.lName}</td></tr>`)   
-        $('#myTable tr:last').after(`<td>DateIssued<td></td><td>:</td><td>${test.subject.mName}</td></tr>`)   
-        $('#myTable tr:last').after(`<td>DateIssued<td></td><td>:</td><td>${test.subject.sex}</td></tr>`)   
+        $('#myTable tr:last').after(`<tr><td>DateIssued<td></td><td>:</td><td>${test.DateIssued}</td></tr>`);   
+        $('#myTable tr:last').after(`<tr><td>Issuer<td></td><td>:</td><td>${test.Issuer}</td></tr>`);   
+        $('#myTable tr:last').after(`<tr><td>alg<td></td><td>:</td><td>${test.alg}</td></tr>`);   
+        $('#myTable tr:last').after(`<tr><td>signature<td></td><td>:</td><td>${test.signature}</td></tr>`);   
+        $('#myTable tr:last').after(`<tr><td>DateIssued<td></td><td>:</td><td>${test.subject.BF}</td></tr>`);    
+        $('#myTable tr:last').after(`<tr><td>BF<td></td><td>:</td><td>${test.subject.DOB}</td></tr>`) 
+        $('#myTable tr:last').after(`<tr><td>PCN<td></td><td>:</td><td>${test.subject.PCN}</td></tr>`) 
+        $('#myTable tr:last').after(`<tr><td>POB<td></td><td>:</td><td>${test.subject.POB}</td></tr>`) 
+        $('#myTable tr:last').after(`<tr><td>fName<td></td><td>:</td><td>${test.subject.fName}</td></tr>`) 
+        $('#myTable tr:last').after(`<tr><td>lName<td></td><td>:</td><td>${test.subject.lName}</td></tr>`)   
+        $('#myTable tr:last').after(`<tr><td>mName<td></td><td>:</td><td>${test.subject.mName}</td></tr>`)   
+        $('#myTable tr:last').after(`<tr><td>Gender<td></td><td>:</td><td>${test.subject.sex}</td></tr>`)   
 
     }
 
