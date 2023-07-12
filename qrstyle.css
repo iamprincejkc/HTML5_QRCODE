@@ -1,0 +1,12 @@
+
+    .scanner-container {
+      margin: 20px;
+      display: none;
+    }
+    .result-container {
+      margin: 20px;
+      font-weight: bold;
+    }
+    .btn {
+      margin: 20px;
+    }

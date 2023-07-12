@@ -1,99 +1,35 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>QR Code Scanner</title>
-  <style>
-    .scanner-container {
-      margin: 20px;
-      display: none;
-    }
-    .result-container {
-      margin: 20px;
-      font-weight: bold;
-    }
-    .btn {
-      margin: 20px;
-    }
-  </style>
+  <title>QR</title>
+  <link rel="stylesheet" href="qrstyle.css">
 </head>
+
 <body>
-  <h1>QR Code Scanner</h1>
-  
+  <h1>QR</h1>
+
   <button id="start-btn" class="btn">Start</button>
   <button id="stop-btn" class="btn" disabled>Stop</button>
-  
-  <div id="video-container" class="scanner-container"style="width:400px;">
+
+  <div id="video-container" class="scanner-container" style="width:400px;">
     <div id="scanner-video"></div>
   </div>
-  
+
   <div id="qr-result" class="result-container"></div>
-  
+  <table id="myTable">
+    <tbody>
+      <tr></tr>
+    </tbody>
+  </table>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://unpkg.com/html5-qrcode"></script>
-  
+  <script src="html5-qrcode.js"></script>
+  <script src="qrscript.js"></script>
+
   <script>
-    let scanner;
-    
-    $(document).ready(function() {
-      $("#start-btn").on("click", function(e) {
-        e.preventDefault();
-        startScanner();
-      });
-      
-      $("#stop-btn").on("click", function(e) {
-        e.preventDefault();
-        stopScanner();
-      });
-    });
-    
-    function startScanner() {
-      $("#start-btn").prop("disabled", true);
-      $("#stop-btn").prop("disabled", false);
-      $("#qr-result").text("Scanning...");
-      $("#video-container").show();
-      
-      scanner = new Html5QrcodeScanner("scanner-video", { fps: 10, qrbox: {width: 200, height: 200} },false);
-      console.log(scanner)
-      scanner.render(onScanSuccess,onScanFailure);
-    }
-    
-    
-    function stopScanner() {
-      $("#start-btn").prop("disabled", false);
-      $("#stop-btn").prop("disabled", true);
-      $("#qr-result").text("");
-      $("#video-container").hide();
-      
-      scanner.clear();
-    }
-    
-    function onScanSuccess(qrCodeMessage) {
-      
-      stopScanner();
-      debugger;
-      var test=JSON.parse(qrCodeMessage);
-      console.log(test.DateIssued);
-      console.log(test.Issuer);
-      console.log(test.alg);
-      console.log(test.signature);
-      console.log(test.subject.BF);
-      console.log(test.subject.DOB);
-      console.log(test.subject.PCN);
-      console.log(test.subject.POB);
-      console.log(test.subject.Suffix);
-      console.log(test.subject.fName);
-      console.log(test.subject.lName);
-      console.log(test.subject.mName);
-      console.log(test.subject.sex);
 
-      $("#qr-result").append();
-
-
-    }
-    
-    function onScanFailure(error) {
-      $("#qr-result").text(error);
-    }
   </script>
 </body>
+
 </html>
